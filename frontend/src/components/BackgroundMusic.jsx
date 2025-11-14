@@ -14,11 +14,8 @@ export const BackgroundMusic = () => {
     audioRef.current.loop = true;
     audioRef.current.volume = 0.3; // Set to 30% volume for background music
     
-    // To add your music file:
-    // 1. Place your legally obtained "Goodnight and Go" audio file in /app/frontend/public/music/
-    // 2. Name it something like "background-music.mp3"
-    // 3. Uncomment the line below:
-    // audioRef.current.src = '/music/background-music.mp3';
+    // Music file loaded: "Goodnight and Go" by Imogen Heap
+    audioRef.current.src = '/music/background-music.mp3';
     
     return () => {
       if (audioRef.current) {
