@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '@/App.css';
 import { AnimatedBackground } from './components/AnimatedBackground';
+import { BackgroundMusic } from './components/BackgroundMusic';
 import { Welcome } from './components/Welcome';
 import { QuizCard } from './components/QuizCard';
 import { LevelComplete } from './components/LevelComplete';
@@ -126,6 +127,7 @@ function App() {
   return (
     <div className="min-h-screen relative overflow-hidden">
       <AnimatedBackground />
+      <BackgroundMusic />
       
       <div className="relative z-10 container mx-auto px-4 py-8 md:py-12">
         <AnimatePresence mode="wait">

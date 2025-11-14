@@ -12,7 +12,7 @@ export const quizData = {
     {
       question: "why is it L8 egg?",
       options: [
-        { text: "i was coming up with a username on the way to class and it made me late, and i like eggs", isCorrect: true },
+        { text: "bc i was L8 to class and i like eggs", isCorrect: true },
         { text: "it's a reference to a song", isCorrect: false },
         { text: "it's my favorite breakfast", isCorrect: false },
         { text: "it's a random combination", isCorrect: false }
