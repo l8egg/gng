@@ -10,6 +10,16 @@ import { Toaster } from './components/ui/sonner';
 import { toast } from 'sonner';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// Fisher-Yates shuffle algorithm
+const shuffleArray = (array) => {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+};
+
 function App() {
   const [gameState, setGameState] = useState('welcome'); // welcome, playing, levelComplete, allLetters
   const [currentLevel, setCurrentLevel] = useState(1);
@@ -17,9 +27,20 @@ function App() {
   const [score, setScore] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [unlockedLetters, setUnlockedLetters] = useState([]);
+  const [shuffledQuestions, setShuffledQuestions] = useState({});
 
-  const currentQuestions = quizData[currentLevel];
-  const currentQuestion = currentQuestions?.[currentQuestionIndex];
+  // Shuffle options for all questions when starting a new level
+  const prepareLevel = (level) => {
+    const questions = quizData[level];
+    const shuffled = questions.map(q => ({
+      ...q,
+      options: shuffleArray(q.options)
+    }));
+    setShuffledQuestions(prev => ({ ...prev, [level]: shuffled }));
+  };
+
+  const currentQuestions = shuffledQuestions[currentLevel] || [];
+  const currentQuestion = currentQuestions[currentQuestionIndex];
 
   const handleStart = () => {
     setGameState('playing');
@@ -28,6 +49,8 @@ function App() {
     setScore(0);
     setCorrectAnswers(0);
     setUnlockedLetters([]);
+    setShuffledQuestions({});
+    prepareLevel(1);
   };
 
   const handleAnswer = (isCorrect) => {
@@ -37,7 +60,7 @@ function App() {
       
       // Celebration toast with emoji
       toast.success('Correct! 🎉', {
-        description: 'You know me so well!',
+        description: 'You know Jennifer so well!',
         duration: 2000,
       });
     } else {
@@ -72,6 +95,7 @@ function App() {
           });
           setCurrentQuestionIndex(0);
           setCorrectAnswers(0);
+          prepareLevel(currentLevel); // Reshuffle for retry
         }
       }, 1500);
     }
@@ -82,6 +106,7 @@ function App() {
       setCurrentLevel(currentLevel + 1);
       setCurrentQuestionIndex(0);
       setCorrectAnswers(0);
+      prepareLevel(currentLevel + 1);
       setGameState('playing');
     } else {
       setGameState('allLetters');
@@ -95,6 +120,7 @@ function App() {
     setScore(0);
     setCorrectAnswers(0);
     setUnlockedLetters([]);
+    setShuffledQuestions({});
   };
 
   return (

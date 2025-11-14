@@ -84,13 +84,13 @@ export const QuizCard = ({
               <Button
                 onClick={() => onAnswer(option.isCorrect)}
                 variant="outline"
-                className="w-full h-auto py-4 px-6 text-left justify-start text-base md:text-lg font-medium border-2 border-primary/30 bg-muted/30 hover:border-primary hover:bg-primary/20 transition-all rounded-2xl group"
+                className="w-full h-auto min-h-[60px] py-4 px-6 text-left justify-start text-base md:text-lg font-medium border-2 border-primary/30 bg-muted/30 hover:border-primary hover:bg-primary/20 transition-all rounded-2xl group"
               >
-                <span className="flex items-center gap-3 w-full">
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/30 text-primary flex items-center justify-center font-display font-semibold group-hover:bg-primary group-hover:text-white transition-colors">
+                <span className="flex items-start gap-3 w-full">
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/30 text-primary flex items-center justify-center font-display font-semibold group-hover:bg-primary group-hover:text-white transition-colors mt-0.5">
                     {String.fromCharCode(65 + index)}
                   </span>
-                  <span className="flex-1">{option.text}</span>
+                  <span className="flex-1 break-words leading-relaxed">{option.text}</span>
                 </span>
               </Button>
             </motion.div>
