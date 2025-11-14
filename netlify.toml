@@ -1,0 +1,17 @@
+# --- BUILD CONFIGURATION: Override UI settings ---
+[build]
+  # The folder where the build command runs
+  base = "frontend"
+
+  # The command to run before looking for files
+  command = "yarn install && yarn build" 
+
+  # The name of the final folder containing the live website files
+  # Netlify will resolve this to: frontend/build
+  publish = "build" 
+
+# --- SPA REDIRECT FIX: Fixes "Page Not Found" errors ---
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
