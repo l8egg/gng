@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 
 export const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [showInstructions, setShowInstructions] = useState(true);
+  const [showInstructions, setShowInstructions] = useState(false);
   const audioRef = useRef(null);
 
   useEffect(() => {
