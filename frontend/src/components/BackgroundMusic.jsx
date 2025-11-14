@@ -62,7 +62,7 @@ export const BackgroundMusic = () => {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1 }}
-        className="fixed bottom-6 right-6 z-50"
+        className="fixed top-6 right-6 z-50"
       >
         <Button
           onClick={togglePlay}
