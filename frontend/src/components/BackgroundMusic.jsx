@@ -4,7 +4,7 @@ import { Volume2, VolumeX, Music } from 'lucide-react';
 import { Button } from './ui/button';
 
 export const BackgroundMusic = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [showInstructions, setShowInstructions] = useState(false);
   const audioRef = useRef(null);
 
@@ -16,6 +16,20 @@ export const BackgroundMusic = () => {
     
     // Music file loaded: "Goodnight and Go" by Imogen Heap
     audioRef.current.src = '/music/background-music.mp3';
+    
+    // Autoplay music when page loads
+    const playMusic = async () => {
+      try {
+        await audioRef.current.play();
+        setIsPlaying(true);
+      } catch (err) {
+        // Autoplay might be blocked by browser - user will need to click play
+        console.log('Autoplay blocked, user interaction required');
+        setIsPlaying(false);
+      }
+    };
+    
+    playMusic();
     
     return () => {
       if (audioRef.current) {
