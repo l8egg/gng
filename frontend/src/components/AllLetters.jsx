@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
-import { Heart } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 export const AllLetters = ({ letters, onRestart }) => {
   return (
@@ -12,19 +12,22 @@ export const AllLetters = ({ letters, onRestart }) => {
       transition={{ duration: 0.5 }}
       className="max-w-4xl mx-auto"
     >
-      <Card className="p-8 md:p-12 shadow-glow bg-card/95 backdrop-blur-sm border-2 border-primary/20 rounded-3xl">
+      <Card className="p-8 md:p-12 shadow-glow bg-card/90 backdrop-blur-sm border-2 border-primary/30 rounded-3xl">
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 200 }}
           className="text-center mb-8"
         >
-          <div className="text-7xl mb-4">🎊</div>
+          <div className="text-7xl mb-4">🌟</div>
           <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
-            Congratulations!
+            Welcome to Dreamland!
           </h1>
           <p className="text-xl text-muted-foreground font-medium">
-            You've completed all levels!
+            You've completed the journey through the night
+          </p>
+          <p className="text-base text-muted-foreground italic mt-2">
+            The sleepy bunny has arrived, guided by the blue butterfly 😴🐰 🦋
           </p>
         </motion.div>
 
@@ -36,7 +39,7 @@ export const AllLetters = ({ letters, onRestart }) => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: index * 0.2 }}
             >
-              <Card className="p-6 bg-gradient-to-br from-muted/50 to-accent/20 border-2 border-primary/20 rounded-2xl">
+              <Card className="p-6 bg-muted/40 border-2 border-primary/30 rounded-2xl hover:border-primary/50 transition-all">
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div
                     animate={{ 
@@ -46,7 +49,7 @@ export const AllLetters = ({ letters, onRestart }) => {
                     transition={{ 
                       duration: 1,
                       repeat: Infinity,
-                      repeatDelay: 3
+                      repeatDelay: 3 + index
                     }}
                     className="text-4xl"
                   >
@@ -54,12 +57,18 @@ export const AllLetters = ({ letters, onRestart }) => {
                   </motion.div>
                   <div>
                     <h3 className="text-xl font-display font-bold text-foreground flex items-center gap-2">
-                      Level {letter.level} Letter
-                      <Heart className="w-5 h-5 text-destructive fill-current" />
+                      {letter.level === 1 && '🌙'}
+                      {letter.level === 2 && '⭐'}
+                      {letter.level === 3 && '💫'}
+                      {' '}Level {letter.level} Letter
+                      <Mail className="w-5 h-5 text-primary" />
                     </h3>
+                    <p className="text-sm text-muted-foreground italic">
+                      ~ from Jennifer ~
+                    </p>
                   </div>
                 </div>
-                <div className="bg-card/50 p-4 rounded-xl border border-border">
+                <div className="bg-card/50 p-4 rounded-xl border border-primary/20">
                   <p className="text-base text-foreground leading-relaxed whitespace-pre-wrap">
                     {letter.content}
                   </p>
@@ -73,9 +82,9 @@ export const AllLetters = ({ letters, onRestart }) => {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button
               onClick={onRestart}
-              className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white font-display font-semibold px-8 py-6 text-lg rounded-2xl shadow-medium"
+              className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white font-display font-semibold px-8 py-6 text-lg rounded-2xl shadow-glow"
             >
-              Play Again 🔄
+              Journey Again 🔄
             </Button>
           </motion.div>
         </div>
@@ -84,10 +93,34 @@ export const AllLetters = ({ letters, onRestart }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="mt-8 text-center"
+          className="mt-8 text-center space-y-4"
         >
+          <div className="flex items-center justify-center gap-4 text-4xl">
+            <motion.span
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              😴🐰
+            </motion.span>
+            <motion.span
+              animate={{ scale: [1, 1.3, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              💕
+            </motion.span>
+            <motion.span
+              animate={{ 
+                y: [-5, 5, -5],
+                rotate: [-5, 5, -5]
+              }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              style={{ filter: 'hue-rotate(200deg)' }}
+            >
+              🦋
+            </motion.span>
+          </div>
           <p className="text-lg text-muted-foreground italic">
-            Thank you for playing! 💖
+            Thank you for playing! Sweet dreams 🌙✨
           </p>
         </motion.div>
       </Card>
