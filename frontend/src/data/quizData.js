@@ -1,124 +1,124 @@
 export const quizData = {
   1: [
     {
-      question: "What's my favorite color?",
+      question: "what's my username for most things?",
       options: [
-        { text: "Pink", isCorrect: true },
-        { text: "Blue", isCorrect: false },
-        { text: "Green", isCorrect: false },
-        { text: "Purple", isCorrect: false }
+        { text: "L8 egg", isCorrect: true },
+        { text: "Late egg", isCorrect: false },
+        { text: "L8er", isCorrect: false },
+        { text: "Jenny", isCorrect: false }
       ]
     },
     {
-      question: "Which season do I love the most?",
+      question: "why is it L8 egg?",
       options: [
-        { text: "Winter", isCorrect: false },
-        { text: "Spring", isCorrect: true },
-        { text: "Summer", isCorrect: false },
-        { text: "Autumn", isCorrect: false }
+        { text: "i was coming up with a username on the way to class and it made me late, and i like eggs", isCorrect: true },
+        { text: "it's a reference to a song", isCorrect: false },
+        { text: "it's my favorite breakfast", isCorrect: false },
+        { text: "it's a random combination", isCorrect: false }
       ]
     },
     {
-      question: "What's my favorite type of food?",
+      question: "what was my pet poodle's name?",
       options: [
-        { text: "Spicy", isCorrect: false },
-        { text: "Sweet", isCorrect: true },
-        { text: "Salty", isCorrect: false },
-        { text: "Sour", isCorrect: false }
+        { text: "Fifi", isCorrect: true },
+        { text: "Fluffy", isCorrect: false },
+        { text: "Mimi", isCorrect: false },
+        { text: "Coco", isCorrect: false }
       ]
     },
     {
-      question: "What animal do I relate to the most?",
+      question: "what's my pet tarantula's name?",
       options: [
-        { text: "Cat", isCorrect: false },
-        { text: "Bunny", isCorrect: true },
-        { text: "Dog", isCorrect: false },
-        { text: "Bird", isCorrect: false }
+        { text: "Miffy", isCorrect: true },
+        { text: "Charlotte", isCorrect: false },
+        { text: "Hairy", isCorrect: false },
+        { text: "Spider", isCorrect: false }
       ]
     }
   ],
   2: [
     {
-      question: "What's my dream vacation destination?",
+      question: "what's my favourite colour?",
       options: [
-        { text: "Paris", isCorrect: true },
-        { text: "Tokyo", isCorrect: false },
-        { text: "New York", isCorrect: false },
-        { text: "London", isCorrect: false }
+        { text: "brown", isCorrect: true },
+        { text: "pink", isCorrect: false },
+        { text: "blue", isCorrect: false },
+        { text: "purple", isCorrect: false }
       ]
     },
     {
-      question: "Which hobby do I enjoy most?",
+      question: "what's your favourite colour?",
       options: [
-        { text: "Painting", isCorrect: false },
-        { text: "Reading", isCorrect: true },
-        { text: "Cooking", isCorrect: false },
-        { text: "Gaming", isCorrect: false }
+        { text: "blue", isCorrect: true },
+        { text: "green", isCorrect: false },
+        { text: "red", isCorrect: false },
+        { text: "yellow", isCorrect: false }
       ]
     },
     {
-      question: "What's my favorite time of day?",
+      question: "what activities did i do in highschool?",
       options: [
-        { text: "Morning", isCorrect: false },
-        { text: "Afternoon", isCorrect: false },
-        { text: "Evening", isCorrect: true },
-        { text: "Night", isCorrect: false }
+        { text: "chess, swimming, librarian", isCorrect: true },
+        { text: "debate, basketball, art club", isCorrect: false },
+        { text: "drama, choir, student council", isCorrect: false },
+        { text: "tennis, coding club, photography", isCorrect: false }
       ]
     },
     {
-      question: "Which movie genre do I prefer?",
+      question: "what's my coffee bean order?",
       options: [
-        { text: "Action", isCorrect: false },
-        { text: "Romance", isCorrect: true },
-        { text: "Horror", isCorrect: false },
-        { text: "Comedy", isCorrect: false }
+        { text: "hazelnut latte, oat milk, less sugar, no cream", isCorrect: true },
+        { text: "vanilla latte, whole milk, extra sugar", isCorrect: false },
+        { text: "caramel macchiato, soy milk", isCorrect: false },
+        { text: "plain black coffee", isCorrect: false }
       ]
     }
   ],
   3: [
     {
-      question: "What's my biggest dream?",
+      question: "what is the name of the device that connects users to the collective consciousness of other mercerites?",
       options: [
-        { text: "Traveling the world", isCorrect: true },
-        { text: "Starting a business", isCorrect: false },
-        { text: "Writing a book", isCorrect: false },
-        { text: "Learning new skills", isCorrect: false }
+        { text: "empathy box", isCorrect: true },
+        { text: "mind connector", isCorrect: false },
+        { text: "consciousness link", isCorrect: false },
+        { text: "soul bridge", isCorrect: false }
       ]
     },
     {
-      question: "What quality do I value most in people?",
+      question: "what pet do rick & iran have?",
       options: [
-        { text: "Humor", isCorrect: false },
-        { text: "Kindness", isCorrect: true },
-        { text: "Intelligence", isCorrect: false },
-        { text: "Confidence", isCorrect: false }
+        { text: "an electric sheep", isCorrect: true },
+        { text: "a real cat", isCorrect: false },
+        { text: "a robotic dog", isCorrect: false },
+        { text: "a synthetic bird", isCorrect: false }
       ]
     },
     {
-      question: "What makes me happiest?",
+      question: "who's the director of westworld?",
       options: [
-        { text: "Shopping", isCorrect: false },
-        { text: "Spending time with loved ones", isCorrect: true },
-        { text: "Achieving goals", isCorrect: false },
-        { text: "Relaxing alone", isCorrect: false }
+        { text: "jonathan nolan", isCorrect: true },
+        { text: "christopher nolan", isCorrect: false },
+        { text: "j.j. abrams", isCorrect: false },
+        { text: "lisa joy", isCorrect: false }
       ]
     },
     {
-      question: "What's my favorite way to spend weekends?",
+      question: "who do i want to go as next for halloween?",
       options: [
-        { text: "Going out with friends", isCorrect: false },
-        { text: "Cozy time at home", isCorrect: true },
-        { text: "Exploring new places", isCorrect: false },
-        { text: "Exercising", isCorrect: false }
+        { text: "natalie portman's black swan", isCorrect: true },
+        { text: "wednesday addams", isCorrect: false },
+        { text: "harley quinn", isCorrect: false },
+        { text: "hermione granger", isCorrect: false }
       ]
     }
   ]
 };
 
 export const letters = {
-  1: "Dear Friend,\n\nThank you for taking the time to get to know me better! This first level was all about the basics - my favorite things that make me, me. I'm so glad you're here on this journey with me.\n\nYour presence in my life means more than you know. These little details might seem simple, but they're part of what makes our connection special.\n\nWith love,\nYour Friend 💖",
+  1: "yay! u made it to the first level. this is such a cute quiz right. keep playing bc each letter is going to explain my reasoning behind the song choices in the mixtape...\n\nso for song 01 - 04, these are songs I feel describe our situation right now, or at least my current headspace with you.. daniel represents the anxious thoughts, jaden represents our shared interests (common artist we like), gregory is another common artist but this song represents the conversations we have with each other, and boy pablo's song here is just perfect for hugs.\n\nok keep going!!!",
   
-  2: "Hey There!\n\nWow, you made it to level 2! You're learning more about what I love and enjoy. Reading has always been my escape, and evenings are when I feel most creative and peaceful.\n\nI cherish these moments we share, and I hope this quiz brings a smile to your face just as you bring joy to my days.\n\nAlways grateful,\nMe 🌸",
+  2: "hellooooo, not baddddd, someone's memory is improving!\n\nsongs 05 - 11 all follow a pretty obvious theme. i actually have nothing more to add.\n\nciao.",
   
-  3: "My Dearest,\n\nYou've reached the final level! You now know my heart - what I dream of, what I value, and what truly makes me happy. Kindness and spending time with loved ones like you are what matter most to me.\n\nThank you for being such a wonderful part of my life. Your friendship is a treasure I hold close to my heart. May we continue to create beautiful memories together.\n\nWith all my love and gratitude,\nForever Your Friend 💕✨"
+  3: "hehe congrats for completing the quiz. and hopefully, also for completing do androids dream of electric sheep and at least one episode of westworld.\n\nso there's actually a secret song 12 - 14 in the mixtape!! individually, they were chosen because of their titles. i've honestly not listened to them much either and found them just for the purpose of the mixtape :3 so again, there's not much to say in this letter really.... but if ur still craving for more, u could let me know and im sure human present-time Jennifer will be gracious and kind to entertain your requests. maybe she has a physical letter even!?!? hey u didnt hear it from me.\n\nanyways, hope u had fun ^U^"
 };
